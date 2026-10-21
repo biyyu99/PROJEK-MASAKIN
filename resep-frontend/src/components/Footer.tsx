@@ -8,79 +8,69 @@ export default function Footer() {
       marginTop: 'auto',
       borderTop: '1px solid var(--border-color)',
       background: 'var(--bg-surface)',
-      padding: '48px 0 24px 0'
+      padding: '44px 0 24px',
     }}>
       <div className="container">
         <div style={{
           display: 'grid',
-          gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))',
-          gap: '36px',
-          marginBottom: '36px'
+          gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))',
+          gap: '32px',
+          marginBottom: '36px',
         }}>
-          {/* Brand Col */}
+          {/* Brand */}
           <div>
-            <div style={{ display: 'flex', alignItems: 'center', gap: '10px', marginBottom: '14px' }}>
+            <div style={{ display: 'flex', alignItems: 'center', gap: '9px', marginBottom: '12px' }}>
               <div style={{
-                width: '36px',
-                height: '36px',
-                borderRadius: '10px',
-                background: 'var(--color-primary-gradient)',
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-                color: '#ffffff'
+                width: '32px', height: '32px', borderRadius: '9px',
+                background: 'var(--color-primary)',
+                display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#fff',
               }}>
-                <ChefHat size={20} />
+                <ChefHat size={17} />
               </div>
-              <span className="heading-display" style={{ fontSize: '1.3rem', fontWeight: 800 }}>
-                Masakin
-              </span>
+              <span className="heading-display" style={{ fontSize: '1.2rem', fontWeight: 700 }}>Masakin</span>
             </div>
-            <p style={{ fontSize: '0.9rem', color: 'var(--text-muted)', lineHeight: '1.6', maxWidth: '320px' }}>
-              Platform berbagi resep masakan Nusantara dan Internasional. Masak lebih mudah, lezat, dan menyenangkan setiap hari.
+            <p style={{ fontSize: '0.85rem', color: 'var(--text-muted)', lineHeight: '1.65', maxWidth: '280px' }}>
+              Platform berbagi resep masakan Nusantara dan internasional. Masak lebih mudah dan menyenangkan setiap hari.
             </p>
           </div>
 
-          {/* Quick Links */}
+          {/* Kategori */}
           <div>
-            <h4 style={{ fontSize: '0.95rem', fontWeight: 700, marginBottom: '16px', color: 'var(--text-main)' }}>
-              Kategori Populer
+            <h4 style={{ fontSize: '0.82rem', fontWeight: 700, marginBottom: '14px', color: 'var(--text-main)', textTransform: 'uppercase', letterSpacing: '0.08em' }}>
+              Kategori
             </h4>
-            <div style={{ display: 'flex', flexDirection: 'column', gap: '10px', fontSize: '0.88rem', color: 'var(--text-muted)' }}>
-              <Link href="/?category_id=1">Sarapan</Link>
-              <Link href="/?category_id=2">Makan Siang</Link>
-              <Link href="/?category_id=3">Makan Malam</Link>
-              <Link href="/?category_id=4">Dessert</Link>
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '9px', fontSize: '0.85rem', color: 'var(--text-muted)' }}>
+              <Link href="/?category_id=1" style={{ transition: 'color 0.15s' }} onMouseEnter={(e) => (e.currentTarget.style.color = 'var(--color-primary)')} onMouseLeave={(e) => (e.currentTarget.style.color = 'var(--text-muted)')}>Sarapan</Link>
+              <Link href="/?category_id=2" style={{ transition: 'color 0.15s' }} onMouseEnter={(e) => (e.currentTarget.style.color = 'var(--color-primary)')} onMouseLeave={(e) => (e.currentTarget.style.color = 'var(--text-muted)')}>Makan Siang</Link>
+              <Link href="/?category_id=3" style={{ transition: 'color 0.15s' }} onMouseEnter={(e) => (e.currentTarget.style.color = 'var(--color-primary)')} onMouseLeave={(e) => (e.currentTarget.style.color = 'var(--text-muted)')}>Makan Malam</Link>
+              <Link href="/?category_id=4" style={{ transition: 'color 0.15s' }} onMouseEnter={(e) => (e.currentTarget.style.color = 'var(--color-primary)')} onMouseLeave={(e) => (e.currentTarget.style.color = 'var(--text-muted)')}>Dessert</Link>
             </div>
           </div>
 
-          {/* Navigation */}
+          {/* Navigasi */}
           <div>
-            <h4 style={{ fontSize: '0.95rem', fontWeight: 700, marginBottom: '16px', color: 'var(--text-main)' }}>
-              Navigasi Cepat
+            <h4 style={{ fontSize: '0.82rem', fontWeight: 700, marginBottom: '14px', color: 'var(--text-main)', textTransform: 'uppercase', letterSpacing: '0.08em' }}>
+              Navigasi
             </h4>
-            <div style={{ display: 'flex', flexDirection: 'column', gap: '10px', fontSize: '0.88rem', color: 'var(--text-muted)' }}>
-              <Link href="/">Beranda Resep</Link>
-              <Link href="/recipe/create">Tulis Resep Baru</Link>
-              <Link href="/my-recipes">Koleksi Resep Saya</Link>
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '9px', fontSize: '0.85rem', color: 'var(--text-muted)' }}>
+              <Link href="/" style={{ transition: 'color 0.15s' }} onMouseEnter={(e) => (e.currentTarget.style.color = 'var(--color-primary)')} onMouseLeave={(e) => (e.currentTarget.style.color = 'var(--text-muted)')}>Beranda</Link>
+              <Link href="/recipe/create" style={{ transition: 'color 0.15s' }} onMouseEnter={(e) => (e.currentTarget.style.color = 'var(--color-primary)')} onMouseLeave={(e) => (e.currentTarget.style.color = 'var(--text-muted)')}>Tulis Resep</Link>
+              <Link href="/my-recipes" style={{ transition: 'color 0.15s' }} onMouseEnter={(e) => (e.currentTarget.style.color = 'var(--color-primary)')} onMouseLeave={(e) => (e.currentTarget.style.color = 'var(--text-muted)')}>Resep Saya</Link>
             </div>
           </div>
         </div>
 
+        {/* Bottom bar */}
         <div style={{
-          paddingTop: '24px',
+          paddingTop: '20px',
           borderTop: '1px solid var(--border-color)',
-          display: 'flex',
-          alignItems: 'center',
-          justifyContent: 'space-between',
-          flexWrap: 'wrap',
-          gap: '12px',
-          fontSize: '0.84rem',
-          color: 'var(--text-muted)'
+          display: 'flex', alignItems: 'center', justifyContent: 'space-between',
+          flexWrap: 'wrap', gap: '10px',
+          fontSize: '0.8rem', color: 'var(--text-subtle)',
         }}>
-          <p>© 2026 Masakin. Hak Cipta Dilindungi.</p>
+          <p>© 2026 Masakin.</p>
           <p style={{ display: 'flex', alignItems: 'center', gap: '4px' }}>
-            Dibuat dengan <Heart size={14} color="var(--color-accent-red)" fill="var(--color-accent-red)" /> untuk para pecinta kuliner.
+            Dibuat dengan <Heart size={13} color="var(--color-accent-rose)" fill="var(--color-accent-rose)" /> untuk pecinta kuliner.
           </p>
         </div>
       </div>
